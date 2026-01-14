@@ -21,6 +21,7 @@ add_message_files(
   RobotVisualStates.msg
   CustomPoint.msg
   LivoxCustomMsg.msg
+  NavigationStatus.msg
 )
 
 
@@ -29,6 +30,7 @@ add_service_files(
   FILES
   DoubleArrayRequest.srv
   RawRequest.srv
+  NavigationControl.srv
 )
 
 # 生成消息
