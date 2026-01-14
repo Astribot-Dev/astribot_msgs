@@ -1,0 +1,13 @@
+# NavigationControl.srv
+# 导航控制服务 - 包含开始、停止三种指令
+
+# 请求部分
+string command                         # 指令类型: "start", "stop"
+geometry_msgs/PoseStamped target_pose  # 目标位置（仅start指令需要）
+bool emergency_stop                    # 是否为紧急停止（仅stop指令,暂时未支持）
+---
+# 响应部分
+bool success                           # 服务调用是否成功（start对应于起点和终点是不是在障碍物内
+                                       #                stop默认返回成功）
+string message                         # 状态信息或错误信息
+string current_status                  # 当前导航状态
