@@ -19,18 +19,13 @@ add_message_files(
   RobotCartesianState.msg
   RobotCartesianStates.msg
   RobotVisualStates.msg
-  CustomPoint.msg
-  LivoxCustomMsg.msg
-  NavigationStatus.msg
 )
 
 
 # 添加服务文件
 add_service_files(
   FILES
-  DoubleArrayRequest.srv
   RawRequest.srv
-  NavigationControl.srv
 )
 
 # 生成消息
